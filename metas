@@ -1,0 +1,33 @@
+#!/bin/bash
+clear
+y='\033[31;1m'
+l='\033[37;1m'
+toilet -f mono12 "#Metas"
+echo "Metasploit installer & Fix bug/error"
+echo "create by: ./Key14"
+echo "thanks to: ./lolzZ"
+echo -e "$y 1 $l Metasploit Installer"
+echo -e "$y 2 $l Error Bundle/Error Installing Bundle"
+echo -e "$y 3 $l exit"
+read -p 'metas@localhost:~# ' keys
+
+if [ $keys = 1 ]
+then
+pkg install git
+pkg install ruby
+pkg install wget
+pkg install curl
+curl -LO https://raw.githubusercontent.com/Hax4us/Metasploit_termux/master/metasploit.sh
+chmod 777 metasploit.sh
+./metasploit.sh
+fi
+
+if [ $keys = 2 ]
+then
+./gemfix
+fi
+
+if [ $keys = 3 ]
+then
+exit
+fi
